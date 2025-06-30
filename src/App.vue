@@ -204,8 +204,8 @@ onUnmounted(() => {
             >
           </li>
           <li>
-            <a href="#about" :class="{ active: activeSection === 'about' }"
-              >关于我们</a
+            <a href="#contact" :class="{ active: activeSection === 'contact' }"
+              >联系我们</a
             >
           </li>
           <li>
@@ -214,8 +214,8 @@ onUnmounted(() => {
             >
           </li>
           <li>
-            <a href="#contact" :class="{ active: activeSection === 'contact' }"
-              >联系我们</a
+            <a href="#about" :class="{ active: activeSection === 'about' }"
+              >关于我们</a
             >
           </li>
         </ul>
@@ -241,30 +241,11 @@ onUnmounted(() => {
         </div>
       </section>
 
-      <!-- 关于我们section -->
-      <section id="about" class="section about-section">
-        <div class="section-content">
-          <div class="text-content">
-            <h2 class="section-title">关于我们</h2>
-            <div class="members-grid">
-              <div
-                class="member-item"
-                v-for="member in members"
-                :key="member.name"
-              >
-                <div class="member-image">
-                  <img :src="member.image" :alt="member.name" />
-                </div>
-                <div class="member-info">
-                  <h3>{{ member.name }}</h3>
-                  <p>{{ member.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-content">
-            <img :src="title2" alt="About Us" />
-          </div>
+      <!-- 联系我们section -->
+      <section id="contact" class="section contact-section">
+        <div class="contact-content">
+          <h2 class="section-title">联系我们</h2>
+          <div class="map" ref="mapContainer"></div>
         </div>
       </section>
 
@@ -295,11 +276,30 @@ onUnmounted(() => {
         </div>
       </section>
 
-      <!-- 联系我们section -->
-      <section id="contact" class="section contact-section">
-        <div class="contact-content">
-          <h2 class="section-title">联系我们</h2>
-          <div class="map" ref="mapContainer"></div>
+      <!-- 关于我们section -->
+      <section id="about" class="section about-section">
+        <div class="section-content">
+          <div class="text-content">
+            <h2 class="section-title">关于我们</h2>
+            <div class="members-grid">
+              <div
+                class="member-item"
+                v-for="member in members"
+                :key="member.name"
+              >
+                <div class="member-image">
+                  <img :src="member.image" :alt="member.name" />
+                </div>
+                <div class="member-info">
+                  <h3>{{ member.name }}</h3>
+                  <p>{{ member.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-content">
+            <img :src="title2" alt="About Us" />
+          </div>
         </div>
       </section>
     </main>
