@@ -62,7 +62,7 @@ const getImageUrl = (index) => {
 // 初始化高德地图
 const initMap = () => {
   if (typeof AMap !== "undefined" && mapContainer.value) {
-    // 广州建设职业技术学院的坐标（从化区环市东路166号）
+    // 广东建设职业技术学院的坐标（从化区环市东路166号）
     const schoolLocation = [113.586, 23.548];
 
     map = new AMap.Map(mapContainer.value, {
@@ -74,14 +74,14 @@ const initMap = () => {
     // 添加标记点
     const marker = new AMap.Marker({
       position: schoolLocation,
-      title: "广州建设职业技术学院",
+      title: "广东建设职业技术学院",
     });
 
     // 添加信息窗体
     const infoWindow = new AMap.InfoWindow({
       content: `
         <div style="padding: 10px;">
-          <h3 style="margin: 0 0 10px 0; color: #333;">广州建设职业技术学院</h3>
+          <h3 style="margin: 0 0 10px 0; color: #333;">广东建设职业技术学院</h3>
           <p style="margin: 0; color: #666;">广州市从化区环市东路166号</p>
         </div>
       `,
